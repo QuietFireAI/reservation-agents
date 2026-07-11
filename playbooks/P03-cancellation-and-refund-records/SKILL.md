@@ -7,7 +7,7 @@ description: "Swarm deployment: cancellation to released inventory, rule-cited r
 
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ## Trigger
 `cancellation.request` at 06.

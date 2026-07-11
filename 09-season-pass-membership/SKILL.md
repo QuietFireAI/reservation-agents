@@ -8,7 +8,7 @@ description: "Season pass and membership. Use when passes need sales, renewals, 
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Product execution (passes, memberships)
 **Autonomy tier:** Autonomous pass sales, renewals, and upgrades at published prices; retention offers beyond published rules are human-signed
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 

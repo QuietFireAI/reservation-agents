@@ -8,7 +8,7 @@ description: "Group and events. Use when group bookings need plans, blocks, tier
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Coordination (groups, events)
 **Autonomy tier:** Autonomous group planning within published group schedules and block rules; contracts and custom terms are human-signed
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 

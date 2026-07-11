@@ -8,7 +8,7 @@ description: "Dining and add-ons. Use when published add-ons need attaching with
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Product execution (dining, experiences)
 **Autonomy tier:** Autonomous add-on sales within published offerings and 02's capacity facts; custom requests are human territory
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 

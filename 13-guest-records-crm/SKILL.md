@@ -8,7 +8,7 @@ description: "Guest records and CRM. Use when interactions need the append-only 
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** System of record (guest records, audit)
 **Autonomy tier:** Autonomous record keeping; the record is append-only - corrections are new entries referencing what they correct; minors' data carries COPPA custody flags
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 

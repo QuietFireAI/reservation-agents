@@ -8,7 +8,7 @@ description: "Operations and weather. Use for closure relay with policy sets, th
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Operations cadence (closures, books)
 **Autonomy tier:** Autonomous monitoring, closure rebroadcast, and book assembly; closure DECLARATIONS are human decisions - this agent relays and coordinates, never decides a closure
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 

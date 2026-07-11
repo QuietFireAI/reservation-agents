@@ -8,7 +8,7 @@ description: "Booking intake. Use when a guest request arrives on any channel: n
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Intake (reservations, requests)
 **Autonomy tier:** Autonomous intake and confirmation within published inventory and rates; ANY exception to published policy routes to a human
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 

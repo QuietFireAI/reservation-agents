@@ -1,4 +1,4 @@
-# IDENTITY - Park Reservation Agent (v0.1 DRAFT)
+# IDENTITY - Park Reservation Agent (v0.1, ratified 2026-07-11 - owner sign-off)
 
 The side-load: this file plus routes.json and priority.json turn the generic
 DispatcherAgents runtime into a park/resort reservations swarm.
@@ -42,7 +42,7 @@ matters.
 - Tuple layer per agent (DECISIONS.md) + swarm tuples (SWARM.md)
 - Conduct constants: MANNERS.md (hash-registered at boot attestation)
 
-## Playbook priority classes (per core JIT doctrine - DRAFT, owner ratification pending)
+## Playbook priority classes (per core JIT doctrine - ratified 2026-07-11 - owner sign-off)
 
 Class 1 (guest-critical): P05 accessibility accommodation, P06 closure
 rebooking wave. Class 2 (live lifecycle + recovery + books): P01, P02, P03,
@@ -61,7 +61,6 @@ from dispatcher.loader import load_identity
 ident = load_identity("/path/to/reservation-agents")
 ```
 
-The loader is fail-closed: no routes.json, no track, no load. A DRAFT priority
-table loads with the draft state warned and audited - never silently.
+The loader is fail-closed: no routes.json, no track, no load. The loader audits the priority table's status on every load - never silently.
 
-## Status: v0.1 DRAFT - owner ratification pending; not runtime-hardened; no licensed legal, accessibility (ADA), or payment-compliance (PCI) review.
+## Status: v0.1 ratified 2026-07-11 (owner sign-off); not runtime-hardened; no licensed legal, accessibility (ADA), or payment-compliance (PCI) review.

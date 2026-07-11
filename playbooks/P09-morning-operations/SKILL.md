@@ -7,7 +7,7 @@ description: "Swarm deployment: the operations morning book. Today's arrivals, c
 
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ## Trigger
 Scheduled daily start (owner-configured time) or owner command.

@@ -8,7 +8,7 @@ description: "Payment and billing records. Use when payments and refunds need re
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Financial records (payments, refunds)
 **Autonomy tier:** RECORDS ONLY - charges and refunds beyond published self-service rules execute solely on signed human `payment.authority`; card data never transits the swarm
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 

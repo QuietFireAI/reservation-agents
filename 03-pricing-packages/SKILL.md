@@ -8,7 +8,7 @@ description: "Pricing and packages. Use when quotes are needed from published ra
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Rates engine (published pricing)
 **Autonomy tier:** Autonomous quoting from published rate tables and package rules; ANY discount, comp, or price exception beyond published rules is human-signed
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 

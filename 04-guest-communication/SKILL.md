@@ -8,7 +8,7 @@ description: "Guest communication. Use when a guest needs a templated confirmati
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Communication hub (guest-facing)
 **Autonomy tier:** Autonomous sends from approved templates; off-template, compensation, and safety-adjacent messages require human approval
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 
