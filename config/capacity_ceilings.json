@@ -1,0 +1,17 @@
+{
+ "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands",
+ "_table": "capacity_ceilings",
+ "_purpose": "SAFETY ceilings per venue - physics, no override",
+ "_fields": [
+  "venue_id",
+  "ceiling",
+  "basis_ref"
+ ],
+ "entries": [
+  {
+   "venue_id": "<example>",
+   "ceiling": "<example>",
+   "basis_ref": "<example>"
+  }
+ ]
+}

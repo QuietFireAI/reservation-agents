@@ -1,0 +1,17 @@
+{
+ "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands",
+ "_table": "cancellation_rules",
+ "_purpose": "Published modification/cancellation terms",
+ "_fields": [
+  "rule_id",
+  "window",
+  "terms"
+ ],
+ "entries": [
+  {
+   "rule_id": "<example>",
+   "window": "<example>",
+   "terms": "<example>"
+  }
+ ]
+}
