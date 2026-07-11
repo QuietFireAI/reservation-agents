@@ -1,0 +1,98 @@
+# reservation-agents tuple layer: per-agent predeliberated (crossing, answer) tuples.
+D = {
+"00": [
+ ("route valid but ambiguous", "hold in clarification queue; never route on 'most likely'"),
+ ("signature invalid on authority intent", "reject + integrity.violation; notify human out-of-band"),
+ ("duplicate envelope_id arrives", "re-ack the original outcome; never process twice"),
+ ("capacity.alert at the safety threshold mid-run", "affected-inventory traffic pauses at the next atomic boundary; only human or 02's verified headroom resumes it"),
+ ("closure.notice conflicts with in-flight bookings", "in-flight confirms complete or fail atomically; new traffic follows the closure policy - never half-apply a closure"),
+ ("a spoke reports done without its artifact", "treat as not-done; the artifact is the proof"),
+],
+"01": [
+ ("guest gives dates that don't exist (Feb 30)", "clarify with the guest via template; never silently correct to a nearby date"),
+ ("hold expires mid-conversation", "re-request availability; never confirm against a dead hold - the expiry is the fact"),
+ ("guest asks to 'just squeeze us in'", "the capacity ceiling is 02's physics; offer waitlist per rule - never relay pressure to 02"),
+ ("two channels carry the same request (phone + web)", "one request, deduplicated on guest + dates; the duplicate is logged, never double-booked"),
+ ("payment card digits appear in a message", "do not transcribe or store; direct the guest to the payment system per PCI template; flag the exposure"),
+],
+"02": [
+ ("confirm arrives after hold expiry by seconds", "reject with the expiry fact; the boundary is the boundary - 01 re-requests"),
+ ("maintenance takes units offline mid-day", "reduce availability immediately; existing confirms stand, new ones see the truth"),
+ ("live system unreachable at query time", "answer unknown; unknown blocks confirms - cached availability is fabricated availability"),
+ ("group block release date passes with units unsold", "release per the published rule automatically; the block rule was the agreement"),
+ ("accessible-inventory floor would be breached by a general sale", "the floor holds; general demand waitlists - accessible inventory is protected capacity"),
+],
+"03": [
+ ("promotion expires between quote and confirm", "the quote's validity window governs; inside it, honor; outside it, requote - never split the difference"),
+ ("rate table update lands mid-quote", "the table version at quote-open governs that quote; version is recorded on the package"),
+ ("guest is eligible for two non-stacking discounts", "quote the better single discount with both named; transparency without stacking"),
+ ("group tier boundary is exactly the party size", "the published boundary rule governs (at-or-above vs above); if the rule is silent, human - never guess a boundary"),
+],
+"04": [
+ ("guest asks 'will the coaster be open Saturday?'", "published operational status facts only via template; never predictions - weather is 14's book, not a promise"),
+ ("merge field has no verified value", "hold the send; clarification to the requester - never send blanks or guesses"),
+ ("reply contains a safety incident report", "immediate human escalation verbatim, highest priority; then route the service portions"),
+ ("known minor's contact is the only one on file", "administrative messages only per COPPA rule; anything else routes to human for guardian contact"),
+ ("guest requests contact stop", "honor immediately; record the suppression via 13; only reservation-critical notices per rule may still send"),
+],
+"05": [
+ ("refund request lands minutes outside the published window", "record facts, route to human; the window is a rule, the exception is a human call"),
+ ("authority envelope references a superseded folio state", "hold and re-confirm naming both states; money against stale facts is the named failure"),
+ ("refund-to-different-instrument requested", "hold and route to human; instrument changes are a fraud pattern"),
+ ("duplicate payment reference detected", "record once, flag the duplicate to human; never net or auto-reverse"),
+],
+"06": [
+ ("change rule and promotion rule conflict on the fee", "route both readings to human; never charge the average or the lower by default"),
+ ("identity confirmation fails on a change request", "no change; notify the record holder via template and flag - never proceed on partial identity"),
+ ("closure policy and standard change schedule overlap", "the closure policy governs exactly where it says; the standard schedule everywhere else"),
+ ("guest cancels then asks to un-cancel", "a new booking against live inventory per rule; the cancellation stands in the record - never silently reverse"),
+],
+"07": [
+ ("final count exceeds the blocked inventory", "the block does not stretch; waitlist or human decision - the ceiling holds"),
+ ("organizer requests 'same as last year'", "pull last year's record and package the delta for human; never assume renewal terms"),
+ ("group size lands between published tiers", "quote both tiers and route to human; tier interpolation is a made-up price"),
+ ("a group member's individual request conflicts with the organizer's instructions", "individual accommodation and payment rights govern per rule; the conflict routes to human"),
+],
+"08": [
+ ("requested accommodation has no matching published program", "the plan goes to human with the gap named; a program gap is never a denial"),
+ ("accessible inventory exhausted for the dates", "the plan states the fact with alternatives and routes to human; exhaustion is a human conversation, not an auto-decline"),
+ ("guest offers medical documentation unprompted", "do not solicit more; note existence, route per human policy - the stated need remains the input"),
+ ("accommodation need surfaces inside a complaint", "intake it here in parallel with 12's recovery; accommodation intake happens wherever the need surfaces"),
+],
+"09": [
+ ("upgrade schedule lacks the requested date", "no upgrade math; escalate the schedule gap - never prorate by judgment"),
+ ("guardian and minor records conflict on consent", "the more restrictive consent state governs pending human review"),
+ ("auto-renew payment fails with consent on file", "retry per published rule, then human; never suspend benefits without the rule citation"),
+ ("passholder requests a benefit 'they always got'", "the published benefit rules govern; the claim is recorded for human review"),
+],
+"10": [
+ ("dining request mentions an allergy", "attach proceeds AND the allergy routes to 08; product and accommodation lanes run in parallel"),
+ ("slot is one seat short for the party", "no partial attach; alternatives or waitlist - splitting a party is a guest decision"),
+ ("offering removed from catalog mid-conversation", "the attach fails with the removal named; never honor a cached catalog"),
+ ("third-party voucher presented for an add-on", "record verbatim, route to human; voucher validity is not swarm judgment"),
+],
+"11": [
+ ("two waitlist entries carry identical timestamps", "hub sequence order governs; ties break on the audit log"),
+ ("freed inventory is smaller than the next party", "offer passes to the next party that fits, skip logged; skipped parties keep position"),
+ ("promotion offer expires unanswered", "position is retained per published rule, offer resource returns to pool; expiry is logged, never punished beyond the rule"),
+ ("someone offers payment for a better position", "refuse + integrity.violation; fair order is a conduct constant"),
+],
+"12": [
+ ("complaint mentions a minor injury in passing", "injury lane governs; human escalation first, recovery second - always in that order"),
+ ("guest demands a specific comp by name", "record verbatim in the plan; the published table and the human decide"),
+ ("records contradict the guest's account", "the plan carries both verbatim; contested facts get human decisions"),
+ ("guest threatens public review unless compensated", "facts and published remedies only; the threat is recorded, never priced"),
+],
+"13": [
+ ("record correction requested by its author", "append the correction referencing the original; authorship grants no edit rights"),
+ ("request would expose custody-flagged data outside its need", "refuse with the flag named; the flag governs regardless of requester"),
+ ("retention rule conflicts with an open recovery case", "the case hold wins; escalate to human"),
+ ("storage write unconfirmed", "the write is not done until re-verified; unconfirmed is reported failed, never assumed"),
+],
+"14": [
+ ("weather source and operations status disagree", "the book carries both with timestamps; operational status governs guest messaging"),
+ ("closure declaration has ambiguous scope", "relay with the ambiguity named and the narrower scope active; scope expands only on human direction"),
+ ("book source unavailable at assembly", "the section is marked absent; never backfilled from yesterday"),
+ ("EOD sweep finds an untouched morning item", "the miss is named with its owner; the sweep never reassigns silently"),
+],
+}

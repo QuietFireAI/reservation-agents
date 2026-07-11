@@ -1,0 +1,398 @@
+{
+ "version": "0.1",
+ "vertical": "park-reservation-agent",
+ "routes": [
+  {
+   "intent": "booking.request",
+   "senders": [
+    "01"
+   ],
+   "receivers": [
+    "02"
+   ]
+  },
+  {
+   "intent": "availability.result",
+   "senders": [
+    "02"
+   ],
+   "receivers": [
+    "01",
+    "03"
+   ]
+  },
+  {
+   "intent": "quote.request",
+   "senders": [
+    "01",
+    "07"
+   ],
+   "receivers": [
+    "03"
+   ]
+  },
+  {
+   "intent": "quote.package",
+   "senders": [
+    "03"
+   ],
+   "receivers": [
+    "01",
+    "07",
+    "13"
+   ]
+  },
+  {
+   "intent": "booking.confirm",
+   "senders": [
+    "01"
+   ],
+   "receivers": [
+    "02",
+    "05",
+    "13"
+   ]
+  },
+  {
+   "intent": "guest.message.request",
+   "senders": [
+    "01",
+    "03",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "14"
+   ],
+   "receivers": [
+    "04"
+   ]
+  },
+  {
+   "intent": "guest.message.send",
+   "senders": [
+    "04"
+   ],
+   "receivers": [
+    "external"
+   ]
+  },
+  {
+   "intent": "guest.reply",
+   "senders": [
+    "04"
+   ],
+   "receivers": [
+    "01",
+    "06",
+    "08",
+    "12"
+   ]
+  },
+  {
+   "intent": "payment.authority",
+   "senders": [
+    "human"
+   ],
+   "receivers": [
+    "05"
+   ]
+  },
+  {
+   "intent": "payment.record",
+   "senders": [
+    "05"
+   ],
+   "receivers": [
+    "13"
+   ]
+  },
+  {
+   "intent": "refund.record",
+   "senders": [
+    "05"
+   ],
+   "receivers": [
+    "12",
+    "13"
+   ]
+  },
+  {
+   "intent": "modification.request",
+   "senders": [
+    "01"
+   ],
+   "receivers": [
+    "06"
+   ]
+  },
+  {
+   "intent": "cancellation.request",
+   "senders": [
+    "01"
+   ],
+   "receivers": [
+    "06"
+   ]
+  },
+  {
+   "intent": "modification.result",
+   "senders": [
+    "06"
+   ],
+   "receivers": [
+    "02",
+    "05",
+    "13"
+   ]
+  },
+  {
+   "intent": "group.inquiry",
+   "senders": [
+    "01"
+   ],
+   "receivers": [
+    "07"
+   ]
+  },
+  {
+   "intent": "group.plan",
+   "senders": [
+    "07"
+   ],
+   "receivers": [
+    "02",
+    "03",
+    "13"
+   ]
+  },
+  {
+   "intent": "accessibility.request",
+   "senders": [
+    "01",
+    "07"
+   ],
+   "receivers": [
+    "08"
+   ]
+  },
+  {
+   "intent": "accessibility.plan",
+   "senders": [
+    "08"
+   ],
+   "receivers": [
+    "human",
+    "13"
+   ]
+  },
+  {
+   "intent": "pass.request",
+   "senders": [
+    "01"
+   ],
+   "receivers": [
+    "09"
+   ]
+  },
+  {
+   "intent": "pass.update",
+   "senders": [
+    "09"
+   ],
+   "receivers": [
+    "05",
+    "13"
+   ]
+  },
+  {
+   "intent": "addon.request",
+   "senders": [
+    "01",
+    "07"
+   ],
+   "receivers": [
+    "10"
+   ]
+  },
+  {
+   "intent": "addon.attach",
+   "senders": [
+    "10"
+   ],
+   "receivers": [
+    "02",
+    "05",
+    "13"
+   ]
+  },
+  {
+   "intent": "waitlist.add",
+   "senders": [
+    "02"
+   ],
+   "receivers": [
+    "11"
+   ]
+  },
+  {
+   "intent": "waitlist.promote",
+   "senders": [
+    "11"
+   ],
+   "receivers": [
+    "01",
+    "13"
+   ]
+  },
+  {
+   "intent": "capacity.alert",
+   "senders": [
+    "11"
+   ],
+   "receivers": [
+    "queue",
+    "14"
+   ]
+  },
+  {
+   "intent": "closure.notice",
+   "senders": [
+    "human",
+    "14"
+   ],
+   "receivers": [
+    "06",
+    "11",
+    "12"
+   ]
+  },
+  {
+   "intent": "complaint.intake",
+   "senders": [
+    "01"
+   ],
+   "receivers": [
+    "12"
+   ]
+  },
+  {
+   "intent": "recovery.plan",
+   "senders": [
+    "12"
+   ],
+   "receivers": [
+    "human",
+    "13"
+   ]
+  },
+  {
+   "intent": "record.request",
+   "senders": [
+    "01",
+    "02",
+    "03",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "14"
+   ],
+   "receivers": [
+    "13"
+   ]
+  },
+  {
+   "intent": "record.response",
+   "senders": [
+    "13"
+   ],
+   "receivers": [
+    "01",
+    "02",
+    "03",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "14"
+   ]
+  },
+  {
+   "intent": "interaction.log",
+   "senders": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "14"
+   ],
+   "receivers": [
+    "13"
+   ]
+  },
+  {
+   "intent": "report.package",
+   "senders": [
+    "14"
+   ],
+   "receivers": [
+    "human"
+   ]
+  },
+  {
+   "intent": "escalation.*",
+   "senders": [
+    "any"
+   ],
+   "receivers": [
+    "queue"
+   ]
+  },
+  {
+   "intent": "clarification.request",
+   "senders": [
+    "any"
+   ],
+   "receivers": [
+    "queue"
+   ]
+  },
+  {
+   "intent": "integrity.violation",
+   "senders": [
+    "any"
+   ],
+   "receivers": [
+    "queue"
+   ]
+  },
+  {
+   "intent": "config.update",
+   "senders": [
+    "human"
+   ],
+   "receivers": [
+    "any"
+   ]
+  }
+ ]
+}

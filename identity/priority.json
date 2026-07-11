@@ -1,0 +1,16 @@
+{
+ "_status": "DRAFT - owner ratification pending (per identity module)",
+ "_doctrine": "JIT run-priority per core doctrine: class 1 = guest-critical (accessibility accommodation, closure waves), class 2 = live reservation lifecycle, recovery, and books, class 3 = group planning and waitlist promotion. Pacing over braking: the siding scheduler paces class contention; nothing slam-stops.",
+ "classes": {
+  "P01": 2,
+  "P02": 2,
+  "P03": 2,
+  "P04": 3,
+  "P05": 1,
+  "P06": 1,
+  "P07": 3,
+  "P08": 2,
+  "P09": 2,
+  "P10": 2
+ }
+}
