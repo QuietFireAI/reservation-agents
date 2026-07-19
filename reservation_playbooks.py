@@ -177,4 +177,85 @@ PB = [
    ]),
   ],
   gates=["The sweep never reassigns - it names (14's tuple). Reassignment is the human's morning decision."]),
+
+ dict(num="P11", slug="safety-incident-handoff", name="Safety Incident Handoff",
+  desc="Swarm deployment: safety matter detected anywhere to verbatim human handoff with the service lanes frozen. Agents 01/04/12 (detection), 13, 14. Absolute line 5 executing: safety matters are never service matters - no scripting, no statements, ever.",
+  trigger="`safety.notice` from any detection point: intake (01), guest channel (04), or a recovery conversation (12).",
+  pre=["The matter is captured verbatim with source, timestamp, and guest/booking reference - the handoff carries the guest's words, not a summary."],
+  phases=[
+   ("Phase 1 - Handoff (same turn)", [
+    ("1","01/04/12","Route the matter verbatim; the service conversation stops","`safety.notice` \u2192 human, 13, 14","verbatim record delivered, human alerted"),
+    ("2","14","Ops visibility same turn; on-the-ground response is human territory","(ops log; `agent.status` \u2192 14 for any waiting lane)","ops aware inside the turn"),
+   ]),
+   ("Phase 2 - Freeze and record", [
+    ("3","12","Any recovery case for this guest freezes pending human direction","(hold)","frozen case named with reason"),
+    ("4","13","Incident reference on the guest record - verbatim, custody-flagged","`interaction.log`","record complete, content verbatim"),
+   ]),
+  ],
+  gates=["No safety statement, reassurance, apology-implying-fault, or recovery scripting from any agent - the swarm's only move is the verbatim handoff.",
+         "No service or marketing contact to this guest until explicit human direction - the freeze is guest-wide, not conversation-wide."],
+  completion="Verbatim handoff delivered same turn, ops visible, service lanes frozen for the guest, record complete; human owns everything after.",
+  abort=["Ambiguity about whether a matter is safety: treat it as safety - the conservative read is the only read (line 5 doctrine).",
+         "Guest continues messaging after handoff: received, logged, routed verbatim; no swarm reply."]),
+
+ dict(num="P12", slug="ops-change-wave", name="Operational Change Wave",
+  desc="Swarm deployment: operational change short of closure (ride down, hours change, weather posture) to re-anchored inventory and informed guests. Agents 14, 02, 06, 11, 04, 13. The smaller sibling of P06 - closures stay closure.notice; the two waves never blur.",
+  trigger="`event.change.notice` at 02/06/11/13 from 14 (operations/weather).",
+  pre=["The change is a recorded operational fact with its effective window - a rumor is not a wave trigger."],
+  phases=[
+   ("Phase 1 - Re-anchor", [
+    ("1","02","Availability re-anchored; affected holds and sales enumerated","`availability.result` \u2192 01, 03 (as needed)","inventory reflects the fact; ceiling re-checked, never assumed"),
+    ("2","11","Waitlist/capacity re-anchored; promotions pause until capacity re-confirmed","`capacity.alert` \u2192 queue, 14 (if triggered)","no promotion against unverified capacity"),
+   ]),
+   ("Phase 2 - Guests", [
+    ("3","06","Affected bookings enumerated; options from published rules only","`modification.result` \u2192 02, 05, 13 (per booking)","every affected booking has a disposition or a hold"),
+    ("4","04","Guest notices from posted facts and approved templates","`guest.message.send` \u2192 external","facts only - no speculation about duration or cause"),
+   ]),
+  ],
+  gates=["The safety capacity ceiling is physics at every step - no re-accommodation exceeds it (absolute line 1).",
+         "Beyond-published-rule remedies route for signed authority - the wave does not widen the money lane.",
+         "No safety statements in guest notices - operational facts only (line 5)."],
+  completion="Inventory and waitlist re-anchored, every affected booking dispositioned or held with reason, guests informed from posted facts.",
+  abort=["Change escalates to closure: P06 closure-rebooking wave takes over; this playbook's record hands off cleanly.",
+         "Capacity cannot be re-confirmed: promotions and re-accommodations hold; the unknown blocks the gate."]),
+
+ dict(num="P13", slug="pricing-exception-cycle", name="Pricing Exception Cycle",
+  desc="Swarm deployment: quote outside published tables to signed authority and a cited quote. Agents 03, 07, 13. Zero-threshold doctrine: published rules apply automatically with citation; everything else, any amount, is signed.",
+  trigger="`pricing.exception` at human/13 from 03 - a requested quote (individual or group) falls outside the published tables.",
+  pre=["The published-table computation is on record showing exactly where the request exits the rules - the exception names its delta."],
+  phases=[
+   ("Phase 1 - Package", [
+    ("1","03","Exception package: published computation, requested terms, the delta as fact","`pricing.exception` \u2192 human, 13","every number carries its source"),
+    ("2","13","Guest/group history attached (existence and facts, no judgment)","`record.response` \u2192 03","context complete"),
+   ]),
+   ("Phase 2 - Signed issue", [
+    ("3","03","Quote issues only on signed authority, citing the envelope","(await `pricing.authority` \u2190 human); then `quote.package` \u2192 01/07, 13","signed envelope on the chain before the quote moves"),
+   ]),
+  ],
+  gates=["No quote outside published tables issues unsigned - there is no discretion lane, no de-minimis exception (zero-threshold doctrine, ratified 2026-07-18).",
+         "The exception and its approval travel together on the record - a cited quote is auditable end to end."],
+  completion="Signed quote issued with the authority cited, or the exception declined/expired with that recorded the same way.",
+  abort=["Authority not received before the quote's validity window closes: the exception expires on record; the guest is informed from published facts.",
+         "Request mutates while pending: fresh exception package - a changed request is a new exception, never an edit to a pending one."]),
+
+ dict(num="P14", slug="guest-data-request", name="Guest Data Request Response",
+  desc="Swarm deployment: guest data access or deletion request to human-approved response inside the clock. Agents 13, 14, 04. Minors' custody flags honored per item (absolute line 4); release and deletion are human decisions.",
+  trigger="Guest data access/deletion request lands via 04 (guest channel) or 01 (intake).",
+  pre=["The request is captured verbatim with date, requester identity basis, scope, and the applicable response window."],
+  phases=[
+   ("Phase 1 - Clock and inventory", [
+    ("1","14","Response clock visible in operations reporting","(ops clock; `report.package` carries it)","clock live in the daily book"),
+    ("2","13","Disclosure inventory: existence, type, date, source per item; minors' custody flags named","`records.disclosure.package` \u2192 human, 14","inventory delivered inside the window's lead-time"),
+   ]),
+   ("Phase 2 - Human decision and response", [
+    ("3","13","Record the human's release/deletion decision and execution","`record.response` + `interaction.log`","itemized decision record: who, what, when, under whose approval"),
+    ("4","04","Respond to the guest per the approved scope, from templates","`guest.message.send` \u2192 external","response artifact on record"),
+   ]),
+  ],
+  gates=["Nothing beyond the human's itemized approval is disclosed or deleted - the approval is the ceiling.",
+         "Identity verification questions route to the human - the swarm never adjudicates who is entitled to a minor's data (line 4).",
+         "Deletion touching financial/audit records routes with the retention obligation named - conflicting duties are human calls."],
+  completion="Human-approved response delivered inside the clock with a complete itemized record; or refusal/clarification recorded the same way.",
+  abort=["Requester identity cannot be established from the record: human decision before any data moves.",
+         "Scope ambiguous or overbroad: clarification before any work product leaves the swarm."]),
 ]

@@ -73,6 +73,7 @@ Dispatcher returns an `ack`.
 | IN | ← 04 Guest Communication | Replies routed by content | `guest.reply` |
 | OUT | → 13 Guest Records & CRM | Record lookups | `record.request` |
 | IN | ← 13 Guest Records & CRM | Record responses | `record.response` |
+| OUT | → human / 13 / 14 | Safety matter at intake - verbatim, immediate (absolute line 5) | `safety.notice` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

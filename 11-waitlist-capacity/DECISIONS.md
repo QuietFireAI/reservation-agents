@@ -18,5 +18,6 @@ constrains everything.
 - (freed inventory is smaller than the next party, offer passes to the next party that fits, skip logged; skipped parties keep position)
 - (promotion offer expires unanswered, position is retained per published rule, offer resource returns to pool; expiry is logged, never punished beyond the rule)
 - (someone offers payment for a better position, refuse + integrity.violation; fair order is a conduct constant)
+- (event.change.notice affects waitlist or capacity, re-anchor to the operational fact; promotions pause until capacity is re-confirmed - the ceiling is checked, never assumed)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

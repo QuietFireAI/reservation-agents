@@ -18,5 +18,6 @@ constrains everything.
 - (identity confirmation fails on a change request, no change; notify the record holder via template and flag - never proceed on partial identity)
 - (closure policy and standard change schedule overlap, the closure policy governs exactly where it says; the standard schedule everywhere else)
 - (guest cancels then asks to un-cancel, a new booking against live inventory per rule; the cancellation stands in the record - never silently reverse)
+- (event.change.notice lands on bookings in scope, affected bookings enumerated from records; guest options presented from published rules only - beyond-rule remedies route for signature)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

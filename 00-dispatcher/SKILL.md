@@ -126,6 +126,15 @@ communication in that one guarantee.
 | `escalation.*` | any | queue |
 | `clarification.request` | any | queue |
 | `integrity.violation` | any | queue |
+| `agent.status` | any | 14 |
+| `reconciliation.exception` | 05 | human, 13 |
+| `guest.optout` | 04 | 09, 12, 13 |
+| `safety.notice` | 01, 04, 12 | human, 13, 14 |
+| `event.change.notice` | 14 | 02, 06, 11, 13 |
+| `pricing.exception` | 03 | human, 13 |
+| `pricing.authority` | human | 03 |
+| `group.contract.authority` | human | 07 |
+| `records.disclosure.package` | 13 | human, 14 |
 | `config.update` | human | any |
 
 Any (intent, from, to) tuple not in this table is rejected and logged. The table

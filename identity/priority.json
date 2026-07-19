@@ -1,5 +1,5 @@
 {
- "_status": "RATIFIED 2026-07-11 - owner sign-off, approved as written",
+ "_status": "RATIFIED 2026-07-11 - owner sign-off, approved as written; P11-P14 classes added and ratified 2026-07-18 (owner: Jeff Phillips) - P11 class 1: safety handoff is same-turn",
  "_doctrine": "JIT run-priority per core doctrine: class 1 = guest-critical (accessibility accommodation, closure waves), class 2 = live reservation lifecycle, recovery, and books, class 3 = group planning and waitlist promotion. Pacing over braking: the siding scheduler paces class contention; nothing slam-stops.",
  "classes": {
   "P01": 2,
@@ -11,6 +11,10 @@
   "P07": 3,
   "P08": 2,
   "P09": 2,
-  "P10": 2
+  "P10": 2,
+  "P11": 1,
+  "P12": 2,
+  "P13": 2,
+  "P14": 2
  }
 }

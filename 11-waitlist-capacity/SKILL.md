@@ -61,6 +61,7 @@ Dispatcher returns an `ack`.
 | OUT | → 04 Guest Communication | Waitlist status messages | `guest.message.request` |
 | OUT | → 13 Guest Records & CRM | Record lookups | `record.request` |
 | IN | ← 13 Guest Records & CRM | Record responses | `record.response` |
+| IN | ← 14 | Operational change - waitlist and capacity re-anchored | `event.change.notice` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

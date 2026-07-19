@@ -18,5 +18,6 @@ constrains everything.
 - (authority envelope references a superseded folio state, hold and re-confirm naming both states; money against stale facts is the named failure)
 - (refund-to-different-instrument requested, hold and route to human; instrument changes are a fraud pattern)
 - (duplicate payment reference detected, record once, flag the duplicate to human; never net or auto-reverse)
+- (books do not reconcile to the penny, reconciliation.exception to human and 13 - $0.00 tolerance (ratified 2026-07-18); 'close enough' is the named breach)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

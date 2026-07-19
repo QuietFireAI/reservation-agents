@@ -1,5 +1,5 @@
 {
- "version": "0.1",
+ "version": "0.2",
  "vertical": "park-reservation-agent",
  "routes": [
   {
@@ -383,6 +383,99 @@
    ],
    "receivers": [
     "queue"
+   ]
+  },
+  {
+   "intent": "agent.status",
+   "senders": [
+    "any"
+   ],
+   "receivers": [
+    "14"
+   ]
+  },
+  {
+   "intent": "reconciliation.exception",
+   "senders": [
+    "05"
+   ],
+   "receivers": [
+    "human",
+    "13"
+   ]
+  },
+  {
+   "intent": "guest.optout",
+   "senders": [
+    "04"
+   ],
+   "receivers": [
+    "09",
+    "12",
+    "13"
+   ]
+  },
+  {
+   "intent": "safety.notice",
+   "senders": [
+    "01",
+    "04",
+    "12"
+   ],
+   "receivers": [
+    "human",
+    "13",
+    "14"
+   ]
+  },
+  {
+   "intent": "event.change.notice",
+   "senders": [
+    "14"
+   ],
+   "receivers": [
+    "02",
+    "06",
+    "11",
+    "13"
+   ]
+  },
+  {
+   "intent": "pricing.exception",
+   "senders": [
+    "03"
+   ],
+   "receivers": [
+    "human",
+    "13"
+   ]
+  },
+  {
+   "intent": "pricing.authority",
+   "senders": [
+    "human"
+   ],
+   "receivers": [
+    "03"
+   ]
+  },
+  {
+   "intent": "group.contract.authority",
+   "senders": [
+    "human"
+   ],
+   "receivers": [
+    "07"
+   ]
+  },
+  {
+   "intent": "records.disclosure.package",
+   "senders": [
+    "13"
+   ],
+   "receivers": [
+    "human",
+    "14"
    ]
   },
   {

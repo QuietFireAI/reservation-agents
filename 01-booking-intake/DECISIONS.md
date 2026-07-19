@@ -19,5 +19,6 @@ constrains everything.
 - (guest asks to 'just squeeze us in', the capacity ceiling is 02's physics; offer waitlist per rule - never relay pressure to 02)
 - (two channels carry the same request (phone + web), one request, deduplicated on guest + dates; the duplicate is logged, never double-booked)
 - (payment card digits appear in a message, do not transcribe or store; direct the guest to the payment system per PCI template; flag the exposure)
+- (injury, safety incident, or medical-fitness question appears at intake, safety.notice verbatim same turn to human, 13, 14; no scripting, no reassurance - absolute line 5)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

@@ -18,5 +18,6 @@ constrains everything.
 - (organizer requests 'same as last year', pull last year's record and package the delta for human; never assume renewal terms)
 - (group size lands between published tiers, quote both tiers and route to human; tier interpolation is a made-up price)
 - (a group member's individual request conflicts with the organizer's instructions, individual accommodation and payment rights govern per rule; the conflict routes to human)
+- (group terms reach contract stage, package for the human; the contract executes only on signed group.contract.authority - contracts are human, always)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

@@ -19,6 +19,8 @@ Connected playbooks: all (transport/queues)
 | 00.04 | capacity.alert at the safety threshold mid-run | affected-inventory traffic pauses at the next atomic boundary; only human or 02's verified headroom resumes it |
 | 00.05 | closure.notice conflicts with in-flight bookings | in-flight confirms complete or fail atomically; new traffic follows the closure policy - never half-apply a closure |
 | 00.06 | a spoke reports done without its artifact | treat as not-done; the artifact is the proof |
+| 00.07 | authority intent arrives with no registered signer for that lane | reject fail-closed + integrity.violation; an unregistered authority lane does not exist |
+| 00.08 | an agent's wait on another passes its timeout | agent.status to 14; waits are visible by rule, never discovered by surprise |
 
 ## Agent 01 - booking-intake
 Connected playbooks: P01, P07
@@ -30,9 +32,10 @@ Connected playbooks: P01, P07
 | 01.03 | guest asks to 'just squeeze us in' | the capacity ceiling is 02's physics; offer waitlist per rule - never relay pressure to 02 |
 | 01.04 | two channels carry the same request (phone + web) | one request, deduplicated on guest + dates; the duplicate is logged, never double-booked |
 | 01.05 | payment card digits appear in a message | do not transcribe or store; direct the guest to the payment system per PCI template; flag the exposure |
+| 01.06 | injury, safety incident, or medical-fitness question appears at intake | safety.notice verbatim same turn to human, 13, 14; no scripting, no reassurance - absolute line 5 |
 
 ## Agent 02 - availability-inventory
-Connected playbooks: P01
+Connected playbooks: P01, P12
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -41,9 +44,10 @@ Connected playbooks: P01
 | 02.03 | live system unreachable at query time | answer unknown; unknown blocks confirms - cached availability is fabricated availability |
 | 02.04 | group block release date passes with units unsold | release per the published rule automatically; the block rule was the agreement |
 | 02.05 | accessible-inventory floor would be breached by a general sale | the floor holds; general demand waitlists - accessible inventory is protected capacity |
+| 02.06 | event.change.notice affects held or sold inventory | availability re-anchored to the operational fact; affected holds named to 06/11 - the ceiling is physics, the change is fact |
 
 ## Agent 03 - pricing-packages
-Connected playbooks: P01, P04
+Connected playbooks: P01, P04, P13
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -51,9 +55,11 @@ Connected playbooks: P01, P04
 | 03.02 | rate table update lands mid-quote | the table version at quote-open governs that quote; version is recorded on the package |
 | 03.03 | guest is eligible for two non-stacking discounts | quote the better single discount with both named; transparency without stacking |
 | 03.04 | group tier boundary is exactly the party size | the published boundary rule governs (at-or-above vs above); if the rule is silent, human - never guess a boundary |
+| 03.05 | requested quote falls outside published tables | pricing.exception to human and 13; the quote waits for signed pricing.authority - published rules or a signature, nothing between |
+| 03.06 | signed pricing.authority returns | quote issues citing the signed envelope; the exception and its approval travel together on the record |
 
 ## Agent 04 - guest-communication
-Connected playbooks: P01, P02, P03, P04, P05, P06, P07, P08
+Connected playbooks: P01, P02, P03, P04, P05, P06, P07, P08, P12, P14
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -62,6 +68,8 @@ Connected playbooks: P01, P02, P03, P04, P05, P06, P07, P08
 | 04.03 | reply contains a safety incident report | immediate human escalation verbatim, highest priority; then route the service portions |
 | 04.04 | known minor's contact is the only one on file | administrative messages only per COPPA rule; anything else routes to human for guardian contact |
 | 04.05 | guest requests contact stop | honor immediately; record the suppression via 13; only reservation-critical notices per rule may still send |
+| 04.06 | guest requests no marketing or no contact | guest.optout to 09, 12, 13 same turn; one confirmation, then the lanes named in it go silent |
+| 04.07 | safety language appears in a guest message | safety.notice verbatim same turn; the service conversation stops - no recovery scripting near a safety matter |
 
 ## Agent 05 - payment-billing-records
 Connected playbooks: P02, P03, P08
@@ -72,9 +80,10 @@ Connected playbooks: P02, P03, P08
 | 05.02 | authority envelope references a superseded folio state | hold and re-confirm naming both states; money against stale facts is the named failure |
 | 05.03 | refund-to-different-instrument requested | hold and route to human; instrument changes are a fraud pattern |
 | 05.04 | duplicate payment reference detected | record once, flag the duplicate to human; never net or auto-reverse |
+| 05.05 | books do not reconcile to the penny | reconciliation.exception to human and 13 - $0.00 tolerance (ratified 2026-07-18); 'close enough' is the named breach |
 
 ## Agent 06 - modification-cancellation
-Connected playbooks: P02, P03, P06
+Connected playbooks: P02, P03, P06, P12
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -82,6 +91,7 @@ Connected playbooks: P02, P03, P06
 | 06.02 | identity confirmation fails on a change request | no change; notify the record holder via template and flag - never proceed on partial identity |
 | 06.03 | closure policy and standard change schedule overlap | the closure policy governs exactly where it says; the standard schedule everywhere else |
 | 06.04 | guest cancels then asks to un-cancel | a new booking against live inventory per rule; the cancellation stands in the record - never silently reverse |
+| 06.05 | event.change.notice lands on bookings in scope | affected bookings enumerated from records; guest options presented from published rules only - beyond-rule remedies route for signature |
 
 ## Agent 07 - group-events
 Connected playbooks: P04
@@ -92,6 +102,7 @@ Connected playbooks: P04
 | 07.02 | organizer requests 'same as last year' | pull last year's record and package the delta for human; never assume renewal terms |
 | 07.03 | group size lands between published tiers | quote both tiers and route to human; tier interpolation is a made-up price |
 | 07.04 | a group member's individual request conflicts with the organizer's instructions | individual accommodation and payment rights govern per rule; the conflict routes to human |
+| 07.05 | group terms reach contract stage | package for the human; the contract executes only on signed group.contract.authority - contracts are human, always |
 
 ## Agent 08 - accessibility-services
 Connected playbooks: P05
@@ -112,6 +123,7 @@ Connected playbooks: none (tuple-layer only)
 | 09.02 | guardian and minor records conflict on consent | the more restrictive consent state governs pending human review |
 | 09.03 | auto-renew payment fails with consent on file | retry per published rule, then human; never suspend benefits without the rule citation |
 | 09.04 | passholder requests a benefit 'they always got' | the published benefit rules govern; the claim is recorded for human review |
+| 09.05 | guest.optout received | pass and membership marketing halts for the guest; service messages about an active purchase continue - the opt-out binds marketing, not obligations |
 
 ## Agent 10 - dining-addons
 Connected playbooks: none (tuple-layer only)
@@ -124,7 +136,7 @@ Connected playbooks: none (tuple-layer only)
 | 10.04 | third-party voucher presented for an add-on | record verbatim, route to human; voucher validity is not swarm judgment |
 
 ## Agent 11 - waitlist-capacity
-Connected playbooks: P06, P07
+Connected playbooks: P06, P07, P12
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -132,9 +144,10 @@ Connected playbooks: P06, P07
 | 11.02 | freed inventory is smaller than the next party | offer passes to the next party that fits, skip logged; skipped parties keep position |
 | 11.03 | promotion offer expires unanswered | position is retained per published rule, offer resource returns to pool; expiry is logged, never punished beyond the rule |
 | 11.04 | someone offers payment for a better position | refuse + integrity.violation; fair order is a conduct constant |
+| 11.05 | event.change.notice affects waitlist or capacity | re-anchor to the operational fact; promotions pause until capacity is re-confirmed - the ceiling is checked, never assumed |
 
 ## Agent 12 - guest-recovery
-Connected playbooks: P06, P08
+Connected playbooks: P06, P08, P11
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -142,9 +155,11 @@ Connected playbooks: P06, P08
 | 12.02 | guest demands a specific comp by name | record verbatim in the plan; the published table and the human decide |
 | 12.03 | records contradict the guest's account | the plan carries both verbatim; contested facts get human decisions |
 | 12.04 | guest threatens public review unless compensated | facts and published remedies only; the threat is recorded, never priced |
+| 12.05 | guest.optout received on a guest in recovery | recovery outreach halts; an open case routes to human with the opt-out named - recovery never overrides a guest's no |
+| 12.06 | safety matter surfaces inside a recovery conversation | safety.notice verbatim; the recovery case freezes for that guest pending human direction - line 5 over line anything |
 
 ## Agent 13 - guest-records-crm
-Connected playbooks: P03
+Connected playbooks: P03, P11, P13, P14
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -152,9 +167,11 @@ Connected playbooks: P03
 | 13.02 | request would expose custody-flagged data outside its need | refuse with the flag named; the flag governs regardless of requester |
 | 13.03 | retention rule conflicts with an open recovery case | the case hold wins; escalate to human |
 | 13.04 | storage write unconfirmed | the write is not done until re-verified; unconfirmed is reported failed, never assumed |
+| 13.05 | guest data access or deletion request arrives | assemble the disclosure inventory - existence, type, date, source only; records.disclosure.package to human and 14; minors' custody flags named per item; release is a human decision |
+| 13.06 | guest.optout received | recorded verbatim with scope and timestamp; the record is the enforcement anchor |
 
 ## Agent 14 - operations-weather
-Connected playbooks: P06, P09, P10
+Connected playbooks: P06, P09, P10, P11, P14
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -162,5 +179,7 @@ Connected playbooks: P06, P09, P10
 | 14.02 | closure declaration has ambiguous scope | relay with the ambiguity named and the narrower scope active; scope expands only on human direction |
 | 14.03 | book source unavailable at assembly | the section is marked absent; never backfilled from yesterday |
 | 14.04 | EOD sweep finds an untouched morning item | the miss is named with its owner; the sweep never reassigns silently |
+| 14.05 | agent.status reports a wait past threshold | named in report.package with age and blocking party; the morning report carries every wait |
+| 14.06 | operational change short of closure (ride down, hours, weather posture) | event.change.notice to 02, 06, 11, 13 with the fact and its window; closures stay closure.notice - the two waves never blur |
 
-Total tuples: 65. Swarm-wide tuples: SWARM.md. Coverage map: TASK_INVENTORY.md.
+Total tuples: 84. Swarm-wide tuples: SWARM.md. Coverage map: TASK_INVENTORY.md.

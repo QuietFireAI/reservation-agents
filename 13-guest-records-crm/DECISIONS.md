@@ -18,5 +18,7 @@ constrains everything.
 - (request would expose custody-flagged data outside its need, refuse with the flag named; the flag governs regardless of requester)
 - (retention rule conflicts with an open recovery case, the case hold wins; escalate to human)
 - (storage write unconfirmed, the write is not done until re-verified; unconfirmed is reported failed, never assumed)
+- (guest data access or deletion request arrives, assemble the disclosure inventory - existence, type, date, source only; records.disclosure.package to human and 14; minors' custody flags named per item; release is a human decision)
+- (guest.optout received, recorded verbatim with scope and timestamp; the record is the enforcement anchor)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

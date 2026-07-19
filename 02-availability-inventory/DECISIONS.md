@@ -19,5 +19,6 @@ constrains everything.
 - (live system unreachable at query time, answer unknown; unknown blocks confirms - cached availability is fabricated availability)
 - (group block release date passes with units unsold, release per the published rule automatically; the block rule was the agreement)
 - (accessible-inventory floor would be breached by a general sale, the floor holds; general demand waitlists - accessible inventory is protected capacity)
+- (event.change.notice affects held or sold inventory, availability re-anchored to the operational fact; affected holds named to 06/11 - the ceiling is physics, the change is fact)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

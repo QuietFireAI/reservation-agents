@@ -63,6 +63,8 @@ Dispatcher returns an `ack`.
 | OUT | → 04 Guest Communication | Recovery communications | `guest.message.request` |
 | OUT | → 13 Guest Records & CRM | Record lookups | `record.request` |
 | IN | ← 13 Guest Records & CRM | Record responses | `record.response` |
+| IN | ← 04 | Guest opt-out - recovery outreach halts for this guest | `guest.optout` |
+| OUT | → human / 13 / 14 | Safety matter surfacing in recovery - verbatim, no scripting | `safety.notice` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

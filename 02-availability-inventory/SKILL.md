@@ -64,6 +64,7 @@ Dispatcher returns an `ack`.
 | OUT | → 11 Waitlist & Capacity | Unsatisfiable demand | `waitlist.add` |
 | OUT | → 13 Guest Records & CRM | Record lookups | `record.request` |
 | IN | ← 13 Guest Records & CRM | Record responses | `record.response` |
+| IN | ← 14 | Operational change (ride down, hours) - availability re-anchored | `event.change.notice` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

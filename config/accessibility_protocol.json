@@ -1,5 +1,5 @@
 {
- "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands",
+ "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands | DOCTRINE RATIFIED 2026-07-18 (owner: Jeff Phillips); protocol entries are deployment content",
  "_table": "accessibility_protocol",
  "_purpose": "Human-lane accommodation routing protocol",
  "_fields": [
@@ -13,5 +13,6 @@
    "owner": "<example>",
    "rule": "<example>"
   }
- ]
+ ],
+ "_doctrine": "NO DENIAL BY THE SWARM (absolute line 2, restated as binding config doctrine): every accessibility request is gathered respectfully and assembled into a plan; every plan routes to a trained human for the decision. The swarm's vocabulary for the accommodation lane contains no 'no'."
 }

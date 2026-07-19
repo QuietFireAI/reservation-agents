@@ -58,6 +58,7 @@ Dispatcher returns an `ack`.
 | OUT | → 04 Guest Communication | Passholder messages | `guest.message.request` |
 | OUT | → 13 Guest Records & CRM | Record lookups | `record.request` |
 | IN | ← 13 Guest Records & CRM | Record responses | `record.response` |
+| IN | ← 04 | Guest opt-out - pass/membership marketing halts | `guest.optout` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

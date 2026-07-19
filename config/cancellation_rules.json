@@ -1,5 +1,5 @@
 {
- "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands",
+ "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands | DOCTRINE RATIFIED 2026-07-18 (owner: Jeff Phillips); rule entries are deployment content - empty is fail-closed by structure",
  "_table": "cancellation_rules",
  "_purpose": "Published modification/cancellation terms",
  "_fields": [
@@ -13,5 +13,6 @@
    "window": "<example>",
    "terms": "<example>"
   }
- ]
+ ],
+ "_doctrine": "ZERO-THRESHOLD RULE (ratified 2026-07-18, permeates all identity blueprints): refunds and remedies matching a published, ratified rule execute automatically with the rule cited; ANY remedy beyond published rules, ANY amount, moves only on signed payment.authority. No de-minimis lane. Books reconciliation tolerance is $0.00 - any variance is reconciliation.exception to the human; 'close enough' is the named breach."
 }

@@ -8,7 +8,7 @@ defect, not a change.
 
 ## Manifest (generated)
 - Agents: 15 (00-dispatcher + 14 spokes)
-- Routes: 36 entries, 36 distinct intents
+- Routes: 45 entries, 45 distinct intents
 - Playbooks: P01-P10 (playbooks/)
 - Layer stack: MANNERS.md → DISPATCHER_CORE.md → identity/ → DECISIONS.md
   (per agent) → playbooks/ → agent SKILL.md files
@@ -50,7 +50,7 @@ defect, not a change.
 - 12 Guest Recovery Agent
 - 13 Guest Records & CRM Agent
 - 14 Operations & Weather Agent
-- Intents: `accessibility.plan`, `accessibility.request`, `addon.attach`, `addon.request`, `availability.result`, `booking.confirm`, `booking.request`, `cancellation.request`, `capacity.alert`, `clarification.request`, `closure.notice`, `complaint.intake`, `config.update`, `escalation.*`, `group.inquiry`, `group.plan`, `guest.message.request`, `guest.message.send`, `guest.reply`, `integrity.violation`, `interaction.log`, `modification.request`, `modification.result`, `pass.request`, `pass.update`, `payment.authority`, `payment.record`, `quote.package`, `quote.request`, `record.request`, `record.response`, `recovery.plan`, `refund.record`, `report.package`, `waitlist.add`, `waitlist.promote`
+- Intents: `accessibility.plan`, `accessibility.request`, `addon.attach`, `addon.request`, `agent.status`, `availability.result`, `booking.confirm`, `booking.request`, `cancellation.request`, `capacity.alert`, `clarification.request`, `closure.notice`, `complaint.intake`, `config.update`, `escalation.*`, `event.change.notice`, `group.contract.authority`, `group.inquiry`, `group.plan`, `guest.message.request`, `guest.message.send`, `guest.optout`, `guest.reply`, `integrity.violation`, `interaction.log`, `modification.request`, `modification.result`, `pass.request`, `pass.update`, `payment.authority`, `payment.record`, `pricing.authority`, `pricing.exception`, `quote.package`, `quote.request`, `reconciliation.exception`, `record.request`, `record.response`, `records.disclosure.package`, `recovery.plan`, `refund.record`, `report.package`, `safety.notice`, `waitlist.add`, `waitlist.promote`
 
 ## Swarm-level decision tuples (predictable scenarios, pre-deliberated)
 - (two playbooks match one trigger, run neither; clarification.request naming both)

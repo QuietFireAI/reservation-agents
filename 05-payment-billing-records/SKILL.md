@@ -63,6 +63,7 @@ Dispatcher returns an `ack`.
 | OUT | → 13 Guest Records & CRM | Payment records | `payment.record` |
 | OUT | → 12 / 13 | Refund records (rule or authority cited) | `refund.record` |
 | OUT | → 04 Guest Communication | Payment/refund confirmations | `guest.message.request` |
+| OUT | → human / 13 | Books variance - $0.00 tolerance, human notified | `reconciliation.exception` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

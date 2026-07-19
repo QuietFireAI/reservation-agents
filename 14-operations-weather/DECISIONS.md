@@ -18,5 +18,7 @@ constrains everything.
 - (closure declaration has ambiguous scope, relay with the ambiguity named and the narrower scope active; scope expands only on human direction)
 - (book source unavailable at assembly, the section is marked absent; never backfilled from yesterday)
 - (EOD sweep finds an untouched morning item, the miss is named with its owner; the sweep never reassigns silently)
+- (agent.status reports a wait past threshold, named in report.package with age and blocking party; the morning report carries every wait)
+- (operational change short of closure (ride down, hours, weather posture), event.change.notice to 02, 06, 11, 13 with the fact and its window; closures stay closure.notice - the two waves never blur)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

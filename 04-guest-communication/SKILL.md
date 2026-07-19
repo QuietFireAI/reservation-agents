@@ -59,6 +59,8 @@ Dispatcher returns an `ack`.
 | OUT | → guests (external) | Approved sends | `guest.message.send` |
 | OUT | → 01 / 06 / 08 / 12 | Replies routed by content | `guest.reply` |
 | OUT | → 13 Guest Records & CRM | Every send/reply verbatim | `interaction.log` |
+| OUT | → 09 / 12 / 13 | Guest opt-out - marketing and recovery outreach halt | `guest.optout` |
+| OUT | → human / 13 / 14 | Safety matter in guest channel - verbatim, immediate | `safety.notice` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

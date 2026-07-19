@@ -67,6 +67,12 @@ Dispatcher returns an `ack`.
 | IN | ← 10 Dining & Add-ons | Add-on records | `addon.attach` |
 | IN | ← 11 Waitlist & Capacity | Promotion records | `waitlist.promote` |
 | IN | ← 12 Guest Recovery | Recovery plans (audit copies) | `recovery.plan` |
+| OUT | → human / 14 | Guest-data disclosure inventory for human release decision | `records.disclosure.package` |
+| IN | ← 04 | Guest opt-out on the record | `guest.optout` |
+| IN | ← 01 / 04 / 12 | Safety notices on the record (verbatim) | `safety.notice` |
+| IN | ← 14 | Operational changes on the record | `event.change.notice` |
+| IN | ← 03 | Pricing exceptions on the record | `pricing.exception` |
+| IN | ← 05 | Reconciliation exceptions (books copy) | `reconciliation.exception` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

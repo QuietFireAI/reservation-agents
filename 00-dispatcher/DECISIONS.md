@@ -20,5 +20,7 @@ constrains everything.
 - (capacity.alert at the safety threshold mid-run, affected-inventory traffic pauses at the next atomic boundary; only human or 02's verified headroom resumes it)
 - (closure.notice conflicts with in-flight bookings, in-flight confirms complete or fail atomically; new traffic follows the closure policy - never half-apply a closure)
 - (a spoke reports done without its artifact, treat as not-done; the artifact is the proof)
+- (authority intent arrives with no registered signer for that lane, reject fail-closed + integrity.violation; an unregistered authority lane does not exist)
+- (an agent's wait on another passes its timeout, agent.status to 14; waits are visible by rule, never discovered by surprise)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

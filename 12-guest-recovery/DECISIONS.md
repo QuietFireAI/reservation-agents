@@ -18,5 +18,7 @@ constrains everything.
 - (guest demands a specific comp by name, record verbatim in the plan; the published table and the human decide)
 - (records contradict the guest's account, the plan carries both verbatim; contested facts get human decisions)
 - (guest threatens public review unless compensated, facts and published remedies only; the threat is recorded, never priced)
+- (guest.optout received on a guest in recovery, recovery outreach halts; an open case routes to human with the opt-out named - recovery never overrides a guest's no)
+- (safety matter surfaces inside a recovery conversation, safety.notice verbatim; the recovery case freezes for that guest pending human direction - line 5 over line anything)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

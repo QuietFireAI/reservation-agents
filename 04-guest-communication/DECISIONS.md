@@ -19,5 +19,7 @@ constrains everything.
 - (reply contains a safety incident report, immediate human escalation verbatim, highest priority; then route the service portions)
 - (known minor's contact is the only one on file, administrative messages only per COPPA rule; anything else routes to human for guardian contact)
 - (guest requests contact stop, honor immediately; record the suppression via 13; only reservation-critical notices per rule may still send)
+- (guest requests no marketing or no contact, guest.optout to 09, 12, 13 same turn; one confirmation, then the lanes named in it go silent)
+- (safety language appears in a guest message, safety.notice verbatim same turn; the service conversation stops - no recovery scripting near a safety matter)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

@@ -18,5 +18,7 @@ constrains everything.
 - (rate table update lands mid-quote, the table version at quote-open governs that quote; version is recorded on the package)
 - (guest is eligible for two non-stacking discounts, quote the better single discount with both named; transparency without stacking)
 - (group tier boundary is exactly the party size, the published boundary rule governs (at-or-above vs above); if the rule is silent, human - never guess a boundary)
+- (requested quote falls outside published tables, pricing.exception to human and 13; the quote waits for signed pricing.authority - published rules or a signature, nothing between)
+- (signed pricing.authority returns, quote issues citing the signed envelope; the exception and its approval travel together on the record)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

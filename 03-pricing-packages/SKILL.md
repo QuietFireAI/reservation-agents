@@ -61,6 +61,8 @@ Dispatcher returns an `ack`.
 | OUT | → 04 Guest Communication | Quote delivery messages | `guest.message.request` |
 | OUT | → 13 Guest Records & CRM | Record lookups | `record.request` |
 | IN | ← 13 Guest Records & CRM | Record responses | `record.response` |
+| OUT | → human / 13 | Quote beyond published tables - signed approval required | `pricing.exception` |
+| IN | ← human | Signed pricing authority for the exception | `pricing.authority` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

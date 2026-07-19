@@ -18,5 +18,6 @@ constrains everything.
 - (guardian and minor records conflict on consent, the more restrictive consent state governs pending human review)
 - (auto-renew payment fails with consent on file, retry per published rule, then human; never suspend benefits without the rule citation)
 - (passholder requests a benefit 'they always got', the published benefit rules govern; the claim is recorded for human review)
+- (guest.optout received, pass and membership marketing halts for the guest; service messages about an active purchase continue - the opt-out binds marketing, not obligations)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

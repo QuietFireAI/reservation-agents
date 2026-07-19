@@ -61,6 +61,10 @@ Dispatcher returns an `ack`.
 | OUT | → 04 Guest Communication | Operational status messages (published facts) | `guest.message.request` |
 | OUT | → 13 Guest Records & CRM | Record pulls | `record.request` |
 | IN | ← 13 Guest Records & CRM | Chronologies, exceptions | `record.response` |
+| IN | ← any | Wait-state visibility past threshold | `agent.status` |
+| OUT | → 02 / 06 / 11 / 13 | Operational change wave (short of closure) | `event.change.notice` |
+| IN | ← 01 / 04 / 12 | Safety notices - ops visibility same turn | `safety.notice` |
+| IN | ← 13 | Disclosure clock visibility | `records.disclosure.package` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask
