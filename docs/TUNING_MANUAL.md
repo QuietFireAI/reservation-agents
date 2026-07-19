@@ -40,14 +40,13 @@ enough" lane. The HITL is notified on every variance.
 
 ---
 
-## PROPOSED thresholds — pending owner ratification
+## Ratified thresholds (owner: Jeff Phillips, 2026-07-18, approved as written — group quote amended 48h→24h)
 
-Conservative defaults until ratified or amended.
 
 | Parameter | Proposed | Consumer |
 |---|---|---|
 | Guest reply SLA | 4 business hours | 04 |
-| Group quote SLA | 48 hours | 03/07 (P04) |
+| Group quote SLA | 24 hours | 03/07 (P04) |
 | Waitlist promotion hold window | 24 hours to claim | 11 (P07) |
 | Recovery first-touch | 24 hours from complaint intake | 12 (P08) |
 | In-rule refund execution | 5 business days | 05 |

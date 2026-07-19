@@ -1,5 +1,5 @@
 {
- "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands",
+ "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands | ALL TEMPLATES RATIFIED Jeff Phillips 2026-07-18 (owner blanket sign-off, Section B decision)",
  "_table": "message_templates",
  "_purpose": "Approved guest communication templates",
  "_fields": [
@@ -19,7 +19,7 @@
    "template_id": "opt_out_confirmed",
    "purpose": "One-time confirmation after guest.optout; then the named lanes go silent",
    "body": "We've received your request and will stop {scope} messages to this contact. Messages about active reservations or purchases you hold will still be sent. Questions: contact guest services.",
-   "approved_by": "<owner name/date>"
+   "approved_by": "Jeff Phillips 2026-07-18"
   }
  ]
 }
