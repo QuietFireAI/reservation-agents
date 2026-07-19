@@ -8,7 +8,7 @@ description: "Availability and inventory. Use when capacity facts, holds, or inv
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Systems execution (inventory, holds)
 **Autonomy tier:** Autonomous availability facts and hold management within configured capacity; SAFETY CAPACITY IS A HARD CEILING - no hold, sale, or promotion may exceed it, ever
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ---
 

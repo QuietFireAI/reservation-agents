@@ -7,7 +7,7 @@ description: "Swarm deployment: guest data access or deletion request to human-a
 
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ## Trigger
 Guest data access/deletion request lands via 04 (guest channel) or 01 (intake).

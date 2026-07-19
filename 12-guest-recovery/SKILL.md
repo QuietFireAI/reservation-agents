@@ -8,7 +8,7 @@ description: "Guest recovery. Use when complaints need facts-first recovery per 
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Service recovery (complaints)
 **Autonomy tier:** Autonomous complaint intake, facts assembly, and published-remedy application; compensation beyond published remedies is human-signed
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ---
 

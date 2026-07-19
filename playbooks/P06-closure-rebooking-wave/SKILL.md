@@ -7,7 +7,7 @@ description: "Swarm deployment: human closure declaration to coordinated rebooki
 
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ## Trigger
 Human closure declaration relayed by 14 as `closure.notice`.

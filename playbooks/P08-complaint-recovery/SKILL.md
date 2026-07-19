@@ -7,7 +7,7 @@ description: "Swarm deployment: complaint to facts-based recovery inside the pub
 
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ## Trigger
 `complaint.intake` at 12, or complaint content in 04's reply routing.

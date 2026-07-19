@@ -7,7 +7,7 @@ description: "Swarm deployment: operational change short of closure (ride down, 
 
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ## Trigger
 `event.change.notice` at 02/06/11/13 from 14 (operations/weather).

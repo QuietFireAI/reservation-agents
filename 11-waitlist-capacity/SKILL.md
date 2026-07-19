@@ -8,7 +8,7 @@ description: "Waitlist and capacity. Use when demand exceeds capacity: fair-orde
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Demand management (waitlist, capacity watch)
 **Autonomy tier:** Autonomous waitlist administration and capacity alerting; promotions execute only into verified freed inventory - the safety ceiling is 02's and it is absolute
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ---
 

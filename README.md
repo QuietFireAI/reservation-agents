@@ -6,9 +6,7 @@ park/resort reservations swarm, loadable into the content-neutral
 The runtime never contains vertical text; this repo never contains transport
 code. That split is the architecture.
 
-**Status: v0.1 ratified 2026-07-11 - owner sign-off. Not runtime-hardened. No
-licensed legal, accessibility (ADA), or payment-compliance (PCI) review has
-been performed.**
+**Status: v0.2 ratified 2026-07-18 (extended from v0.1 2026-07-11) - owner sign-off. Blueprint, not runtime-hardened. No licensed regulatory, or hospitality-practice review has been performed.**
 
 ## What this is for
 
@@ -34,7 +32,7 @@ What it never does - the five absolute lines (identity/IDENTITY-park-reservation
 | Path | What it is |
 |---|---|
 | `identity/routes.json` | The closed track: 36 (intent, senders, receivers) routes - single source of truth |
-| `identity/priority.json` | JIT playbook priority classes (ratified 2026-07-11) |
+| `identity/priority.json` | JIT playbook priority classes (ratified 2026-07-11; extended & ratified 2026-07-18) |
 | `identity/IDENTITY-park-reservation-agent.md` | The identity declaration |
 | `00-dispatcher/ ... 14-operations-weather/` | 15 agent SKILL.md + DECISIONS.md (tuple layer) |
 | `playbooks/P01 ... P10` | Deployment playbooks: new reservation through EOD books |

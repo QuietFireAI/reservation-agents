@@ -8,7 +8,7 @@ description: "Modification and cancellation. Use when reservations need changes 
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Change execution (reservations)
 **Autonomy tier:** Autonomous changes within published rules and live inventory; fee waivers and out-of-policy changes are human-signed
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ---
 

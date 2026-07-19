@@ -8,7 +8,7 @@ description: "Accessibility services. Use when accommodation requests need respe
 **Swarm:** DispatcherAgents Reservation Swarm (Parks & Resorts)
 **Type:** Accommodation coordination (ADA lane)
 **Autonomy tier:** Autonomous intake, information, and plan ASSEMBLY; NO accommodation request is ever denied, narrowed, or negotiated by this swarm - plans route to a trained human for decision, always
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ---
 
